@@ -1,0 +1,76 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD VISIT</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css" />
+
+</head>
+<body>
+
+<div class="heading-centre">
+    <h2 class="heading2">Add a new Visit</h2>
+</div>
+
+<div class="heading-line">
+</div>
+
+<div>
+    <div class="left-half-div-pos">
+
+        <h3><?php
+            echo @$_GET['error']
+        ?> </h3>
+
+        <form class="form-spacing" method="post" action="visit-form.php" id="visit-form">
+            <input class="transparent-entry form-full-width" type="Date" id="Date" name="Date" value="Date" required><br>
+            <input class="transparent-entry form-full-width" type="Time" id="Time" name="Time" value="Time" required><br>
+            <input class="transparent-entry form-full-width" type="Number" id="Duration" name="Duration" value="Duration" required><br><br><br>
+            <!-- ASSUMPTION THAT THE CANCEL BUTTON CLEARS THE FORM-->
+
+            <input type="hidden" id="posX" name="posX" required >
+            <input type="hidden" id="posY" name="posY" required>
+
+            <input class="form-full-width form-button" type="submit" value="Add"><br>
+            <input class="form-full-width form-button" type="reset" value="Cancel"><br>
+        </form>
+    </div>
+
+    <div class="map-pos" name="mapDiv", id="mapDiv">
+        <div class="map-div">
+            <img class="map-image" name="map-image" src="exeter.jpg" alt="EXETER MAP IMAGE NOT AVAILABLE">
+        </div>
+
+        <div class="map-div" name="pin" id="pin" style="visibility: hidden">
+            <img style="width: 25px; height: 25px; display: inline-block;" src="marker_black.png" alt="PIN">
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    document.getElementById("mapDiv").addEventListener("click", getPos);
+
+    function getPos(event) {
+         var locX = event.clientX - 12.5;
+         var locY = event.clientY - 25;
+
+        document.getElementById("posX").value = locX;
+        document.getElementById("posY").value = locY;
+
+        document.getElementById("pin").style.visibility = 'visible';
+        document.getElementById("pin").style.left = locX + 'px';
+        document.getElementById("pin").style.top = locY + 'px';
+
+        console.log(locX + " : " + locY);
+
+    }
+</script>
+
+</body>
+</html>

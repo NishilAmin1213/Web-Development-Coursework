@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css" />
+</head>
+<body>
+
+<div class="form-div-pos" name="form">
+
+    <h3><?php
+        echo @$_GET['error']
+    ?> </h3>
+
+    <form class="form-spacing" method="post" action="login-form.php" id="login-form">
+        <input class="transparent-entry form-full-width" type="text" id="Username" name="Username" placeholder="Username" required><br>
+        <input class="transparent-entry form-full-width" type="text" id="Password" name="Password" placeholder="Password" required><br><br>
+        <!-- ASSUMPTION THAT THE CANCEL BUTTON CLEARS THE FORM-->
+        <input class="form-half-width form-button" type="submit" value="Login">
+        <input class="form-half-width form-button" type="reset" value="Cancel"><br>
+    </form>
+
+    <form class="form-spacing" method="get" action="registration.php">
+        <button class="form-full-width form-button" type="submit">Register</button>
+    </form>
+</div>
+
+
+</body>
+</html>

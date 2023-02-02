@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REPORT</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css" />
+
+</head>
+<body>
+
+<div class="heading-centre">
+    <h2 class="heading2">Report an Infection</h2>
+</div>
+
+<div class="heading-line">
+</div>
+
+<div class="heading-text">
+    Please report the date and time when you were tested positive for COVID-19
+</div>
+
+<div class="report-setting-form-div-pos">
+    <form class="form-spacing" method="post" action="report-form.php" id="report-form">
+        <input class="transparent-entry form-full-width" type="date" id="Date" name="Date" placeholder="Date"><br>
+        <input class="transparent-entry form-full-width" type="time" id="Time" name="Time" placeholder="Time"><br>
+        <!-- ASSUMPTION THAT THE CANCEL BUTTON CLEARS THE FORM-->
+        <input class="form-half-width form-button report-left" type="submit" placeholder="Report">
+        <input class="form-half-width form-button report-right" type="reset" placeholder="Cancel"><br>
+    </form>
+</div>
+
+</body>
+</html>

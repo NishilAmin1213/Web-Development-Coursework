@@ -1,0 +1,37 @@
+ <?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css" />
+
+</head>
+<body>
+
+<div class="heading-centre">
+    <h2 class="heading2">Status</h2>
+</div>
+
+<div class="heading-line">
+</div>
+
+<div>
+    <div class="left-half-div-pos">
+        <h3 class="h3"> Hi <?php echo $_SESSION['Name'] ?> you might have had a connection to an infected person at the location shown in red</h3><br><br><br><br><br><br><br><br><br><br><br>
+        <h3 class="h3"> Click on the marker to see details about the infection</h3>
+    </div>
+
+    <div class="map-pos" name="mapDiv", id="mapDiv">
+        <div class="map-div">
+            <img class="map-image" name="map-image" src="exeter.jpg" alt="EXETER MAP IMAGE NOT AVAILABLE">
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

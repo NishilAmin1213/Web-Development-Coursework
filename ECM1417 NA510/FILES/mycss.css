@@ -1,0 +1,174 @@
+/*BACKGROUND IMAGE*/
+body{
+    background-image:url("watermark.png");
+    background-color: rgba(255, 255, 255, 0.75);
+    background-size: 40%;
+    background-blend-mode: lighten;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-position-y: 150px;
+}
+
+.h3 {
+    font-weight: normal;
+}
+
+/* GREY TITLE BANNER AT TOP OF SCREEN */
+.heading1 {
+    margin:0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: #ADB9CA;
+    font-size: 50px;
+    font-family: Arial;
+    font-weight: 700;
+}
+
+.heading2 {
+    margin:0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial;
+}
+
+.heading-line {
+    position: absolute;
+    top: 265px;
+    left: 27.5%;
+    width: 1317px;
+    border: black 2px solid;
+}
+
+.heading-centre {
+    position: absolute;
+    top: auto;
+    left: 50%;
+}
+.heading-text {
+    position: absolute;
+    top: 300px;
+    left: 30%;
+
+    margin:0;
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial;
+}
+
+.entry-label {
+    margin:0;
+    font-size: 25px;
+    font-family: Arial;
+}
+
+/* LEFT MENU BAR */
+.left-menu-bar {
+    position: absolute;
+    width: 300px;
+    background-color: #ADB9CA;
+}
+
+.left-menu-elem {
+    font-family: Arial;
+    font-size: 25px;
+    height: 70px;
+    width: 300px;
+    background-color:  rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+
+.left-menu-elem-current {
+    font-family: Arial;
+    font-size: 25px;
+    height: 70px;
+    width: 300px;
+    background-color:  #8497B0;
+    border-color: rgba(0,0,0,0);
+}
+
+.left-menu-elem:hover {
+    background-color: #8497B0;
+}
+
+/*EXETER MAP IMAGE SCALING*/
+.map-image {
+    width: 90%;
+    height: 90%;
+    display: inline-block;
+    border-style: solid;
+}
+
+.map-div {
+    position: absolute;
+    top: 37.5%;
+    left: 60%;
+}
+
+.map-pos {
+    top:0;
+    left:0;
+}
+
+/*FORM STYLES FOR DIFFERENT FEATURES REQUIRED*/
+.left-half-div-pos {
+    position: absolute;
+    top: 35%;
+    left: 27.5%;
+    width: 450px;
+}
+
+.report-left {
+    position: absolute;
+    top: 80%;
+    left: -48%;
+}
+
+.setting-left {
+    position: absolute;
+    top: 80%;
+    left: -30%;
+}
+
+.report-right {
+    position: absolute;
+    top: 80%;
+    left: 100%;
+}
+
+.report-setting-form-div-pos {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+}
+
+.form-div-pos {
+    position: absolute;
+    top: 25%;
+    left:42%;
+}
+
+.form-full-width {
+    height: 35px;
+    width: 280px;
+}
+
+.form-half-width {
+    height: 35px;
+    width: 135px;
+}
+
+.transparent-entry {
+    background-color: rgba(0,0,0,0);
+}
+
+.form-button {
+    border-radius: 5px;
+    background-color: white;
+}
+
+.form-spacing {
+    font-size: xxx-large;
+}

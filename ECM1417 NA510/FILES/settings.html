@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SETTINGS</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css" />
+
+</head>
+<body>
+
+<div class="heading-centre">
+    <h2 class="heading2">Alert Settings</h2>
+</div>
+
+<div class="heading-line">
+</div>
+
+<div class="heading-text">
+    Here you may change the alert distance and the time span for which the contact tracing will be performed
+</div>
+
+<div class="report-setting-form-div-pos">
+    <form class="form-spacing" method="post" action="save-settings.php" id="settings-form">
+
+        <label class="entry-label" for="Window">Window</label>
+        <select class="transparent-entry form-full-width" name="Window" id="Window">
+            <option value="1">One Week</option>
+            <option value="2">Two Weeks</option>
+            <option value="3">Three Weeks</option>
+            <option value="4">Four Weeks</option>
+        </select><br>
+
+        <label class="entry-label" for="Distance">Distance</label>
+        <input class="transparent-entry form-full-width" type="text" id="Distance" name="Distance" placeholder="Distance"><br>
+        <!-- ASSUMPTION THAT THE CANCEL BUTTON CLEARS THE FORM-->
+        <input class="form-half-width form-button setting-left" type="submit" value="Report">
+        <input class="form-half-width form-button report-right" type="reset" value="Cancel"><br>
+    </form>
+</div>
+
+</body>
+</html>

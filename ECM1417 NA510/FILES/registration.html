@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css" />
+</head>
+<body>
+
+<div class="form-div-pos">
+    <h3><?php
+        echo @$_GET['error']
+    ?> </h3>
+
+    <form class="form-spacing" method="post" action="reg-form.php" onsubmit="return validatePassword()" id="reg-form" name="regForm">
+        <input class="transparent-entry form-full-width" type="text" placeholder="Name" id="Name" name="Name" required><br>
+        <input class="transparent-entry form-full-width" type="text" placeholder="Surname" id="Surname" name="Surname"><br>
+
+        <input class="transparent-entry form-full-width" type="text" id="Username" name="Username" placeholder="Username" required><br>
+        <input class="transparent-entry form-full-width" type="Password" id="Password" name="Password" placeholder="Password" minlength="8" required><br>
+        <!-- ASSUMPTION THAT THE CANCEL BUTTON CLEARS THE FORM-->
+        <input class="form-full-width form-button" type="submit" aria-valuetext="Register">
+    </form>
+
+    <form class="form-spacing" method="get" action="index.php">
+        <button class="form-full-width form-button" type="submit">Back to Login</button>
+    </form>
+</div>
+
+<script>
+
+    function validatePassword() {
+        var password = document.getElementById('Password').value;
+        var lowercase = false;
+        var uppercase = false;
+        var digit = false;
+        var error_msg = "Error: ";
+
+        for (var i=0; i < password.length; i++) {
+            if (password.charCodeAt(i) >= 97 && password.charCodeAt(i) <= 122) {
+                lowercase = true;
+            }
+            if (password.charCodeAt(i) >= 65 && password.charCodeAt(i) <= 90) {
+                uppercase = true;
+            }
+            if (password.charCodeAt(i) >= 48 && password.charCodeAt(i) <= 57) {
+                digit = true;
+            }
+        }
+
+        if(uppercase && lowercase && digit) {
+            return true;
+        }
+        if(!(uppercase && lowercase && digit)) {
+            if(!(lowercase)) {
+                error_msg += "\nLowercase Letter Missing";
+            }
+            if(!(uppercase)){
+                error_msg += "\nUppercase Letter Missing";
+            }
+            if(!(digit)){
+                error_msg += "\nDigit Missing";
+            }
+            //THIS CHUNK OF CODE STILL ALLOWS THE FORM TO SUBMIT WHEN BUTTON PRESSED
+            alert(error_msg)
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
